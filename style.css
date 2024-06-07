@@ -62,6 +62,9 @@ header span {
   border-radius: 10px;
 
 }
+.food_item a{
+  color: inherit;
+}
 #select_city {
   width: 14%;
   height:auto;
