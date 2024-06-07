@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: white;
+}
+.cont_field{
+    width: 60%;
+    height: auto;
+    margin: 2% auto;
+    border: none;
+    border-radius: 16px;
+}
+fieldset{
+    box-shadow: 0 0 10px black;
+    width: 100%;
+    height: auto;
+    margin: 2% auto;
+    border: none;
+    border-radius: 16px;
+    text-align: center;
+}
+fieldset h1{
+    font-size: 40px;
+    color: black;
+    text-align: center;
+}
+input ,#sques,textarea,button{
+    width: 40%;
+    margin: auto; 
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 2px 2px;
+    /* border-radius: 7px; */
+    border:  none;
+    outline:none;
+    border-bottom: 1px solid rgb(54, 129, 243);
+}
+input:focus ,#sques:focus,textarea:focus{
+    border-bottom: 2px solid rgb(54, 129, 243);
+    border-left: 2px solid rgb(54, 129, 243);
+    border-bottom-left-radius: 5px;
+    /* border:  none;
+    border-bottom: 1px solid royalblue; */
+}
+#lname,#mail,#sans,#profile,#confirm{
+    margin-left: 5%;
+}
+#profile{
+    color: black;
+}
+#sques{
+    width: 41.5%;
+}
+textarea{
+    width: 86.5%;
+}
+button{
+    width: 20%;
+    padding: 0px;
+    background-color: rgb(54, 129, 243);
+    color: white;
+    border-radius: 7px;
+    border: none;
+    margin-bottom: 5%;
+}
+button::after{
+    transform: scale(5%);
+    scale: 5%;
+}
+/* --------------------------------REsposive ----------- */
+
+@media screen and (max-width: 450px) {
+
+    fieldset{
+        width: 100%;
+    }
+    .cont_field{
+        width: 90%;
+    }
+    input , textarea ,#sques,button{
+        width: 84%;
+        font-size: 20px;
+    }
+    #lname,#mail,#sans,#profile,#confirm{
+        margin-left: 0%;
+    }
+    #profile{
+        padding-left: 0;
+    }
+    button{
+        width: 35%;
+        margin-bottom: 15%;
+    }
+    #sques{
+    width: 88%;
+    }
+    
+}

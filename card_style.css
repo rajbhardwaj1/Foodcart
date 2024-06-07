@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+  *{
+  box-sizing: border-box;
+  }
+  .content1{
+  display: flex;
+  padding: 0 35px;
+  margin: 5vh 0;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(245, 245, 245);
+}
+.wrapper {
+  max-width: 98%;
+  width: 100%;
+  padding-left: 20px;
+  position: relative;
+}
+.wrapper .i {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 1px 3px 5px rgb(63, 63, 63);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper .i:active{
+  transform: translateY(-50%) scale(0.70);
+}
+.wrapper .i:first-child{
+  left: -10px;
+  z-index: 1;
+}
+.wrapper .i:last-child{
+  right: -7px;
+}
+.wrapper .carousel{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 5% );
+  gap: 7%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  border-radius: 2px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.carousel .card {
+  scroll-snap-align: start;
+  height: auto;
+  aspect-ratio: 4/3.5;
+  list-style: none;
+  background: #fff5f5;
+  cursor: pointer;
+  padding-bottom: 15px;
+  flex-direction: column;
+  margin: 10px 10px 10px 0px;
+  position: relative;
+  border-radius: 20px;
+  padding-bottom: 30px;
+  box-shadow: 0px 0px 7px rgb(80, 80, 80);
+}
+.carousel .card .img {
+  margin: auto; 
+  width: 100%;
+  border-radius: 20px;
+  position: relative;
+}
+.card .img .uimg {
+  width: 96%;
+  margin: 2%;
+  aspect-ratio: 16/9;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
+
+
+.carousel .card .c_off{
+  position: absolute;
+  color: white;background-color: royalblue;
+  bottom: 5.5%;
+  padding: 4px;
+  left: 2%;
+}
+.carousel .card h2 {
+  font-weight: 500;
+  color: black;
+  font-size: 24px;
+  margin: -5px 5px 0px 2%;
+}
+.subhead1 , .subhead2{
+  color: #656566;
+  margin-left: 8px;
+  margin-top: 7px;
+}
+.subhead1{
+  font-size: 16px;
+}
+.subhead2{
+  font-size: 12px;
+}
+.card a{
+    text-decoration: none;
+}
+.card .rating{
+    color: white;
+    background-color: green;
+    font-size: 1rem;
+    position: absolute;
+    right: 6px;
+    bottom: -11%;
+    margin-top: 5px;
+    padding: 3px 18px 3px 5px;
+    border-radius: 5px;
+}
+.card .rating i{
+  position: absolute;
+  font-size: 12px;
+  margin-top: 2px;
+}
+.card .c_start_with{
+  font-weight: 700;
+  color: black;
+  position: absolute;
+  right: 2%;
+  font-size: 13px;
+  top: 86%;
+}
+.card .c_time{
+  position: absolute;
+  right: 6px;
+ bottom: -23%;
+  color: black;
+  font-size: 14px;
+}
+
+
+@media screen and (min-width:600px) and (max-width: 1000px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 3%);
+    gap: 7%;
+    margin-left: -2%;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 1) - 3%);
+    gap: 15%;
+    margin-left: 5%;
+  }
+  
+}

@@ -1,0 +1,142 @@
+.form_container{
+    margin: 15vh auto;
+    box-shadow: 0 0 7px rgb(117, 83, 67);
+    border-radius: 10px;
+    width: 500px;
+    min-width: 250px;
+    max-width: 500px;
+    padding: 30px;
+    overflow: hidden;
+    height: auto;
+}
+
+.button{
+    padding: 6px 24px;
+    border: 2px solid #ffffff;
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .button:active {
+    transform: scale(0.95);
+  }
+  
+  .form_container h2 {
+    font-size: 22px;
+    color: #0b0217;
+    text-align: center;
+  }
+  .input_box {
+    position: relative;
+    margin-top: 30px;
+    width: 87%;
+    height: 40px;
+  }
+  .input_box input , select {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0 30px;
+    color: #333;
+    transition: all 0.2s ease;
+    border-bottom: 1.5px solid #aaaaaa;
+  }
+  .input_box input ,select:focus {
+    border-color: rgb(54, 129, 243);
+  }
+  .input_box i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #707070;
+  }
+  .input_box i.email,
+  .input_box i.password {
+    left: 0;
+  }
+  .input_box input:focus ~ i.email,
+  .input_box input:focus ~ i.password {
+    color: rgb(54, 129, 243);
+  }
+  .input_box i.pw_hide {
+    right: 0;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  .option_field {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .form_container a {
+    color: rgb(54, 129, 243);
+    font-size: 12px;
+  }
+  .form_container a:hover {
+    text-decoration: underline;
+  }
+  .checkbox {
+    display: flex;
+    column-gap: 8px;
+    white-space: nowrap;
+  }
+  .checkbox input {
+    accent-color: rgb(54, 129, 243);
+  }
+  .checkbox label {
+    font-size: 12px;
+    cursor: pointer;
+    user-select: none;
+    color: #0b0217;
+  }
+  .form_container .button {
+    background: rgb(54, 129, 243);
+    margin-top: 30px;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+  }
+  .login_signup {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+  }
+  #signup{
+    text-decoration: none;
+  }
+  select{
+    width: 113.5%;
+    background-color: white;
+  }
+  .step2 .input_box i{
+    right: -10%;
+  }
+
+
+  .step1{
+    display: none;
+  }
+  .step2{
+    display:block;
+  }
+  @media screen and (max-width : 600px) {
+    .form_container{
+        width: 70%;
+    }
+    .input_box {
+        position: relative;
+        margin-top: 30px;
+        width: 80%;
+        height: 40px;
+      }
+      select{
+        width: 130%;
+      }
+      .step2 .input_box i{
+        right: -25%;
+      }
+    
+  }

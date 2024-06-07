@@ -1,0 +1,8 @@
+.cart-wrapper{
+    background-color: aliceblue;
+    width: 80%;
+    height: 400px;
+    display: flex;
+    justify-items: center;
+    padding-top: 50px;
+}

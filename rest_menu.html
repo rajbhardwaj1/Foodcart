@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- for log in form icon cdn -->
+  <link rel="stylesheet" href="rest_menu_style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="shortcut icon" href="/foodcart_logo2.png" type="image/x-icon">
+  <title>FoodCart</title>
+</head>
+
+<body id="body">
+  <header>
+    <div class="logo"><a href="index.html">
+        <img class="imghead" src="foodcart_logo.jpg" alt="FoodCart" /></a>
+    </div>
+    <a href="index.html">HOME</a>
+    <a href="servives.html">SERVICES</a>
+    <a href="contact.html">CONTACT</a>
+    <a href="about.html">ABOUT</a>
+    <a href="cart.html" id="cart_logo"><i class="fas fa-shopping-cart"></i><span></span></a>
+    <i class="fa-solid fa-bars" onclick="menu()" id="menu"></i>
+  </header>
+  <!-- ---------- menu bar  -->
+  <div id="close_menu" class="close_menu" onclick="menu()"></div>
+  <div id="menubar">
+    <i onclick="menu()" class="fa-solid fa-square-xmark"></i>
+    <a href="index.html">
+      <h3>HOME</h3>
+    </a>
+    <a href="servives.html">
+      <h3>SERVICES</h3>
+    </a>
+    <a href="contact.html">
+      <h3>CONTACT</h3>
+    </a>
+    <a href="about.html">
+      <h3>ABOUT</h3>
+    </a>
+  </div>
+
+  <!-- -------------------- -->
+  <div class="filter-blur f-close"></div>
+  <div class="filter-bar">
+    <label class="filters">Filters</label><img class="filter-close f-close" src="https://img.icons8.com/?size=256&id=9433&format=png" alt="">
+    <details>
+      <summary>Food Type</summary>
+        <input type="radio" name="type" id="all" checked><label for="all">ALL</label><br>
+        <input type="radio" name="type" id="veg" ><label for="veg">VEG</label><br>
+        <input type="radio" name="type" id="nveg" ><label for="nveg">NON-VEG</label>
+  </details>
+  <details>
+    <summary>Customer Ratings</summary>
+    <input type="radio" name="rating" id="all2" checked><label for="all2">ALL</label><br>
+    <input type="radio" name="rating" id="r4"><label for="r4">4 <span class="s-span" > ★ </span>& Above</label><br>
+    <input type="radio" name="rating" id="r35" ><label for="r35">3 <span class="s-span" > ★ </span> & Above</label><br>
+    <input type="radio" name="rating" id="r3" ><label for="r3">2 <span class="s-span" > ★ </span> & Above</label>
+</details>
+<details>
+  <summary>Food Price</summary>
+  <input type="radio" name="price" id="all3" checked><label for="all3">ALL</label><br>
+  <input type="radio" name="price" id="p5" ><label for="p5">500+</label><br>
+  <input type="radio" name="price" id="p2" ><label for="p2">200+</label><br>
+  <input type="radio" name="price" id="p1" ><label for="p1">100+</label><br>
+</details>
+<details>
+  <summary>Discount</summary>
+  <input type="radio" name="discount" id="all4" checked><label for="all4">ALL</label><br>
+  <input type="radio" name="discount" id="d70" ><label for="d70">70% or more</label><br>
+  <input type="radio" name="discount" id="d50" ><label for="d50">50% or more</label><br>
+  <input type="radio" name="discount" id="d30" ><label for="d30">30% or more</label><br>
+</details>
+  </div>
+  <section class="main_banner">
+  <div class="banner">
+    <img class="b_img" src="https://i.pinimg.com/736x/64/c1/9b/64c19bae48a95b031e98b606dd42c997.jpg" alt="">
+    <img src="https://i.pinimg.com/736x/85/6b/62/856b623156b0c17206cbb8116c6af248.jpg" alt="" class="profile">
+    <i class="fa-regular fa-heart i1"></i>
+    <i class="fa-solid fa-heart i2"></i>
+    <p class="p_time"><i class="fa-regular fa-clock"></i> 32 Min</p>
+    <p class="r_off" data-aos="zoom-in">50% OFF</p>
+    <p class="r_name">McDonald's</p>
+    <p class="i_name">Burger, Fast Food, Coldrink</p>
+    <p class="add">North Patel Nagar, Patna 800023</p>
+    <p class="s_with">Start @ ₹149</p>
+    <p class="r_rating">4.1<i class="fa-sharp fa-solid fa-star"></i></p>
+
+  </div>
+</section>
+<section class="show-items"> 
+  <button class="filter-button"><img class="filter-logo" src="https://img.icons8.com/?size=256&id=3004&format=png" alt="">Filter</button>
+  <div class="dish_con">
+      <div class="dish-item">
+        <img src="https://img.icons8.com/?size=256&id=zz4M4H8yATCp&format=png"  alt="nonveg" class="veg">
+        <img src="https://img.icons8.com/?size=256&id=DVGrLsbRV2No&format=png"  alt="veg"  class="veg">
+        <i class="fa-regular fa-heart f1"></i>
+        <i class="fa-solid fa-heart f2"></i>
+        <img class="dish-img" src="https://joyfoodsunshine.com/wp-content/uploads/2020/08/whole-wheat-pizza-dough-recipe-1x1-1.jpg" alt="">
+        <p class="f_rating">4.1<i class="fa-sharp fa-solid fa-star f-star"></i></p>
+        <p class="f-name">Blazing Onion & Paprika</p>
+        <p class="f-dis">Hot & spicy pizza with onion & red paprika toppings and a new spicy peri peri sauce on a Domino's cheesy base.</p>
+        
+        <div class="f-price">
+          <p class="f-lprice">₹1249</p><br>
+          <p class="f-fprice"><del>₹2599</del></p>
+          <p class="f-off">-50%</p>
+        </div>
+        <button class="b1"><P>ADD TO CART</P></button>
+        <button class="b2"><P>ADDED</P></button>
+      </div>
+      <div class="dish-item">
+        <img src="https://img.icons8.com/?size=256&id=zz4M4H8yATCp&format=png"  alt="nonveg" class="veg">
+        <img src="https://img.icons8.com/?size=256&id=DVGrLsbRV2No&format=png"  alt="veg" style="display: none;" class="veg">
+        <i class="fa-regular fa-heart f1"></i>
+        <i class="fa-solid fa-heart f2"></i>
+        <img class="dish-img" src="https://assets-global.website-files.com/6425f03eadc96686600b6d52/64f3b82deb4093116e90949d_Smoky%20Chipotle%20BBQ%20Chicken%20Pizza%20with%20Cilantro%20and%20Red%20Onion.png" alt="">
+        <p class="f_rating">4.1<i class="fa-sharp fa-solid fa-star f-star"></i></p>
+        <p class="f-name">Roasted Chicken Onion</p>
+        <p class="f-dis">Spiciest non veg pizza with spicy & herby chicken sausage and red paprika toppings on a new spicy peri peri sauce</p>
+        
+        <div class="f-price">
+          <p class="f-lprice">₹249</p><br>
+          <p class="f-fprice"><del>₹499</del></p>
+          <p class="f-off">-50%</p>
+        </div>
+        <button class="b1"><P>ADD TO CART</P></button>
+        <button class="b2"><P>ADDED</P></button>
+      </div>
+
+      <div class="dish-item">
+        <img src="https://img.icons8.com/?size=256&id=zz4M4H8yATCp&format=png"  alt="nonveg" class="veg">
+        <img src="https://img.icons8.com/?size=256&id=DVGrLsbRV2No&format=png"  alt="veg" class="veg">
+        <i class="fa-regular fa-heart f1"></i>
+        <i class="fa-solid fa-heart f2"></i>
+        <img class="dish-img" src="https://media.istockphoto.com/id/1442417585/photo/person-getting-a-piece-of-cheesy-pepperoni-pizza.webp?b=1&s=170667a&w=0&k=20&c=27qSFEznalRWqZ5iAgm4fnM6u_TgIqsgUWb3qLTn-Hk=" alt="">
+        <p class="f_rating">4.1<i class="fa-sharp fa-solid fa-star f-star"></i></p>
+        <p class="f-name">Blazing Onion & Paprika</p>
+        <p class="f-dis">Hot & spicy pizza with onion & red paprika toppings and a new spicy peri peri sauce on a Domino's cheesy base.</p>
+        
+        <div class="f-price">
+          <p class="f-lprice">₹1249</p><br>
+          <p class="f-fprice"><del>₹2599</del></p>
+          <p class="f-off">-50%</p>
+        </div>
+        <button class="b1"><P>ADD TO CART</P></button>
+        <button class="b2"><P>ADDED</P></button>
+      </div>
+      <div class="dish-item">
+        <img src="https://img.icons8.com/?size=256&id=zz4M4H8yATCp&format=png"  alt="nonveg" class="veg">
+        <img src="https://img.icons8.com/?size=256&id=DVGrLsbRV2No&format=png"  alt="veg" class="veg">
+        <i class="fa-regular fa-heart f1"></i>
+        <i class="fa-solid fa-heart f2"></i>
+        <img class="dish-img" src="https://joyfoodsunshine.com/wp-content/uploads/2020/08/whole-wheat-pizza-dough-recipe-1x1-1.jpg" alt="">
+        <p class="f_rating">4.1<i class="fa-sharp fa-solid fa-star f-star"></i></p>
+        <p class="f-name">Blazing Onion & Paprika</p>
+        <p class="f-dis">Hot & spicy pizza with onion & red paprika toppings and a new spicy peri peri sauce on a Domino's cheesy base.</p>
+        
+        <div class="f-price">
+          <p class="f-lprice">₹1249</p><br>
+          <p class="f-fprice"><del>₹2599</del></p>
+          <p class="f-off">-50%</p>
+        </div>
+        <button class="b1"><P>ADD TO CART</P></button>
+        <button class="b2"><P>ADDED</P></button>
+      </div>
+      <div class="dish-item">
+        <img src="https://img.icons8.com/?size=256&id=zz4M4H8yATCp&format=png"  alt="nonveg" class="veg">
+        <img src="https://img.icons8.com/?size=256&id=DVGrLsbRV2No&format=png"  alt="veg" style="display: none;" class="veg">
+        <i class="fa-regular fa-heart f1"></i>
+        <i class="fa-solid fa-heart f2"></i>
+        <img class="dish-img" src="https://joyfoodsunshine.com/wp-content/uploads/2020/08/whole-wheat-pizza-dough-recipe-1x1-1.jpg" alt="">
+        <p class="f_rating">4.1<i class="fa-sharp fa-solid fa-star f-star"></i></p>
+        <p class="f-name">Blazing Onion & Paprika</p>
+        <p class="f-dis">Hot & spicy pizza with onion & red paprika toppings and a new spicy peri peri sauce on a Domino's cheesy base.</p>
+        
+        <div class="f-price">
+          <p class="f-lprice">₹1249</p><br>
+          <p class="f-fprice"><del>₹2599</del></p>
+          <p class="f-off">-50%</p>
+        </div>
+        <button class="b1"><P>ADD TO CART</P></button>
+        <button class="b2"><P>ADDED</P></button>
+      </div>
+
+
+  </div>
+</section>
+
+
+  <!-- ----------------------  Hero Section finish ------------------- -->
+
+
+  <!-- ------------------------------------------------------------------ -->
+
+  <!-- <div class="foot_grad"></div> -->
+  <footer>
+    <div class="foot1">
+      <img class="foot-icon" src="foodcart_logo.jpg" alt="FoodCart" />
+      <div class="sel-fott">
+      <select name="" id="foot_sel1">
+        <option value="India">India</option>
+      </select>
+      <select name="" id="foot_sel2">
+        <option value="English">English</option>
+      </select>
+      <img id="flag_icon" src="https://img.icons8.com/?size=256&id=32584&format=png" alt="" />
+      <img src="https://img.icons8.com/?size=512&id=3685&format=png" id="glob_icon" alt="" />
+    </div>
+    </div>
+    <div class="foot_cont">
+      <div class="gridpart">
+        <div class="box">
+          <p id="fist_p">ABOUT FOODCART</p>
+          <a href="about.html">
+            <p>Who We are</p>
+            <p>Blog</p>
+            <p>Work with us</p>
+            <p>Investor Relations</p>
+            <p>Report Fraud</p>
+            <p>Press Kit</p>
+          </a>
+        </div>
+        <div class="box">
+          <p id="fist_p">OUR SERVICES</p>
+          <a href="servives.html">
+            <p>Partnership with us</p>
+            <p>App for you</p>
+            <p>Restaurant partnership</p>
+            <p>Delevery Service</p>
+          </a>
+        </div>
+      </div>
+      <div class="gridpart">
+        <div class="box">
+          <p id="fist_p">FOR SUPPORT</p>
+          <a href="servives.html">
+            <p>Register your complain</p>
+            <p>Essue in delevery</p>
+          </a>
+          <p id="fist_p">FOR ENTERPRISES</p>
+          <a href="servives.html">
+            <p>FoodCart Enterprises</p>
+          </a>
+        </div>
+        <div class="box">
+          <p id="fist_p">LEARN MORE</p>
+          <a href="about.html">
+            <p>Privacy</p>
+            <p>Career</p>
+            <p>Terms</p>
+          </a>
+        </div>
+      </div>
+      <div class="gridpart2">
+        <div class="box sbox">
+          <p id="fist_p">SOCIAL LINKS</p>
+          <a href=""><img id="social_ico" src="https://img.icons8.com/?size=256&id=uzhJQ5CyNoaH&format=png"
+              alt="" /></a>
+          <a href=""><img src="https://img.icons8.com/?size=256&id=6JVVYaPk4wp2&format=png" id="social_ico"
+              alt="" /></a>
+          <a href=""><img src="https://img.icons8.com/?size=256&id=ZOFC5nSr215Y&format=png" id="social_ico"
+              alt="" /></a>
+          <a href=""><img src="https://img.icons8.com/?size=256&id=BuPTAxiuBrcx&format=png" id="social_ico"
+              alt="" /></a>
+          <a href=""><img src="https://img.icons8.com/?size=256&id=zWrz2bjEiP4D&format=png" id="social_ico"
+              alt="" /></a>
+          <br />
+          <a href=""><img id="app_store"
+              src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png" alt="" /></a>
+          <a href=""><img id="app_store"
+              src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png" alt="" /></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <hr />
+      <br />
+      <p>
+        By continuing past this page , you agree to our Terms of Service ,
+        Cookie Policy , Privacy Policy and Content Policies . All trademarks
+        are properties of their respective owners . 2024 © FoodCart™ Ltd. All
+        rights reserved.
+      </p>
+    </div>
+    <br />
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- <script src="script_card.js"></script> -->
+
+  <script src="restmenu.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+
+  </script>
+
+</body>
+
+</html>

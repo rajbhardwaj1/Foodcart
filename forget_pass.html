@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forget password</title>
+    <link rel="stylesheet" href="forget_pass_style.css">
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+</head>
+<body>
+            <div class="form_container">
+              <!-- Login From -->
+              <div class="form login_form" >
+                <form >
+                  <h2>Reset your password</h2>
+      
+                  <div class="input_box">
+                    <input type="email" placeholder="Enter your email" required />
+                    <i class="uil uil-envelope-alt email"></i>
+                  </div>
+                  <div class="step1">
+                  <div class="input_box">
+                    <select name="ques" required id="sques">
+                        <option value="" selected disabled>Security Quistions</option>
+                        <option value="nickname" >Your nickname</option>
+                        <option value="bestfriend" >your best friends name</option>
+                        <option value="pets" >your pets name</option>
+                        <option value="loved" >your loved ones name</option>
+                    </select>
+                  </div>
+                  <div class="input_box">
+                    <input type="text" id="sans" required placeholder="Security Answer">
+                  </div>
+                 
+      
+                  
+      
+                  <button class="button">Reset Password</button>
+                </div>
+                <div class="step2">
+                    <div class="input_box">
+                        <input 
+                          type="password"
+                          placeholder="Enter New password"
+                          required
+                        />
+                        <i class="uil uil-lock password"></i>
+                        <i class="uil uil-eye-slash pw_hide"></i>
+                    </div>
+                    <div class="input_box">
+                        <input 
+                          type="password"
+                          placeholder="Confirm password"
+                          required
+                        />
+                        <i class="uil uil-lock password"></i>
+                        <i class="uil uil-eye-slash pw_hide"></i>
+                    </div>
+                  <button class="button">Reset</button>
+                </div>
+                 
+                </form>
+              </div>
+      
+              <!-- Signup From -->
+            </div>
+    <script>
+        
+    </script>
+</body>
+</html>
